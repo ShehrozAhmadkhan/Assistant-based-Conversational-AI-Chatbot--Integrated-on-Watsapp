@@ -17,13 +17,6 @@ client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
 pc = Pinecone(api_key = os.getenv("PINECONE_API_KEY"))
 
-"""
-pc.create_index(name="ask-uni",
-                dimension=1024,
-                metric="cosine",
-                spec=ServerlessSpec(cloud="aws", region="us-east-1"))
-
-"""
 index = pc.Index("ask-uni")
 """
 data = load_pdf_data("catalog.pdf")
